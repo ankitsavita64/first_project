@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .main{
+                width:2000px;
+                background-color:blue;
+                color:white;
+                padding:20px;
+                font-size:30px;
+            }
+        </style>    
+    </head>
+    <body>
+        {% for n in student_details %}
+        <div>{{n}}</div>
+        {% endfor %}
+
+    </br>
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+
+        {% for d in student_details %}
+        <tr>
+            <td>{{d.no}}</td>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>
